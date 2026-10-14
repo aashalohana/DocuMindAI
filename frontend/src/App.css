@@ -630,3 +630,138 @@
     flex-direction: column;
   }
 }
+
+.library-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 26px 0 13px;
+}
+
+.library-heading h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.library-heading p {
+  margin: 0;
+  color: #9295aa;
+  font-size: 11px;
+}
+
+.refresh-button {
+  border: 1px solid #e4e4f2;
+  border-radius: 8px;
+  background: white;
+  color: #625ce1;
+  padding: 8px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.refresh-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.library-list {
+  display: grid;
+  gap: 9px;
+}
+
+.document-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e8e9f2;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.document-file-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 40px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: #f0efff;
+  color: #6862db;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.document-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.document-name {
+  color: #333552;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.document-details span,
+.library-empty {
+  color: #8d90a6;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.library-empty {
+  margin: 0;
+  padding: 15px;
+  background: #f8f8fd;
+  border-radius: 10px;
+}
+
+.delete-button {
+  flex-shrink: 0;
+  border: 1px solid #f0dfe3;
+  border-radius: 8px;
+  background: #fff;
+  color: #a34758;
+  padding: 7px 9px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #fff3f5;
+}
+
+.question-section {
+  border-top: 1px solid #eeeff5;
+  margin-top: 25px;
+  padding-top: 23px;
+}
+
+.question-heading {
+  margin-bottom: 20px;
+}
+
+.success-message {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid #cfecdc;
+  border-radius: 10px;
+  background: #f0faf4;
+  color: #28744c;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.source-location {
+  display: block;
+  margin-top: 10px;
+  color: #898ca3;
+  font-size: 10px;
+}
