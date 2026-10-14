@@ -1,0 +1,147 @@
+
+{
+  "benchmark_name": "DocuMind Retrieval Benchmark v1",
+  "description": "Synthetic evaluation corpus for reproducible retrieval testing.",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "initial_abstention_threshold": 0.30,
+  "corpus": [
+    {
+      "id": "refund_policy",
+      "filename": "refund_policy.txt",
+      "text": "Customers may request a refund within 14 days of purchase. Submit refund requests through the account billing page. Approved refunds are processed to the original payment method."
+    },
+    {
+      "id": "support_hours",
+      "filename": "support_hours.txt",
+      "text": "Customer support is available Monday to Friday. Online technical support is provided through the customer portal."
+    },
+    {
+      "id": "account_security",
+      "filename": "account_security.txt",
+      "text": "Never share your password. Enable two-factor authentication to add extra protection to your account."
+    },
+    {
+      "id": "upload_guidelines",
+      "filename": "upload_guidelines.txt",
+      "text": "Only upload documents you have permission to use. Do not upload confidential or sensitive information unless you are authorized to process it."
+    },
+    {
+      "id": "shipping_policy",
+      "filename": "shipping_policy.txt",
+      "text": "Physical orders are dispatched within two business days. Customers receive a tracking link after dispatch."
+    },
+    {
+      "id": "invoice_policy",
+      "filename": "invoice_policy.txt",
+      "text": "Customers can find their invoices in the account billing dashboard. Downloadable invoices include the purchase date and order reference."
+    },
+    {
+      "id": "subscription_policy",
+      "filename": "subscription_policy.txt",
+      "text": "Customers may cancel a subscription any time before its next renewal date. Access remains active until the current billing period ends."
+    },
+    {
+      "id": "document_requirements",
+      "filename": "document_requirements.txt",
+      "text": "The application supports PDF and DOCX documents. Image-only scanned PDFs may need optical character recognition before their text can be searched."
+    }
+  ],
+  "queries": [
+    {
+      "id": "R01",
+      "question": "How many days after purchase can a customer request a refund?",
+      "expected_source_ids": ["refund_policy"],
+      "answerable": true
+    },
+    {
+      "id": "R02",
+      "question": "Where should a refund request be submitted?",
+      "expected_source_ids": ["refund_policy"],
+      "answerable": true
+    },
+    {
+      "id": "R03",
+      "question": "Which payment method is used for approved refunds?",
+      "expected_source_ids": ["refund_policy"],
+      "answerable": true
+    },
+    {
+      "id": "R04",
+      "question": "When is customer support available?",
+      "expected_source_ids": ["support_hours"],
+      "answerable": true
+    },
+    {
+      "id": "R05",
+      "question": "How can I get online technical support?",
+      "expected_source_ids": ["support_hours"],
+      "answerable": true
+    },
+    {
+      "id": "R06",
+      "question": "What should users never share?",
+      "expected_source_ids": ["account_security"],
+      "answerable": true
+    },
+    {
+      "id": "R07",
+      "question": "What adds extra protection to an account?",
+      "expected_source_ids": ["account_security"],
+      "answerable": true
+    },
+    {
+      "id": "R08",
+      "question": "What permission is needed before uploading a document?",
+      "expected_source_ids": ["upload_guidelines"],
+      "answerable": true
+    },
+    {
+      "id": "R09",
+      "question": "What is the rule for confidential or sensitive information?",
+      "expected_source_ids": ["upload_guidelines"],
+      "answerable": true
+    },
+    {
+      "id": "R10",
+      "question": "How soon are physical orders dispatched?",
+      "expected_source_ids": ["shipping_policy"],
+      "answerable": true
+    },
+    {
+      "id": "R11",
+      "question": "Where can customers find invoices?",
+      "expected_source_ids": ["invoice_policy"],
+      "answerable": true
+    },
+    {
+      "id": "R12",
+      "question": "Can a subscription be cancelled before renewal?",
+      "expected_source_ids": ["subscription_policy"],
+      "answerable": true
+    },
+    {
+      "id": "U01",
+      "question": "Who is the company's CEO?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U02",
+      "question": "What is the company's headquarters street address?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U03",
+      "question": "Which credit cards are accepted?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U04",
+      "question": "In which year was the company founded?",
+      "expected_source_ids": [],
+      "answerable": false
+    }
+  ]
+}

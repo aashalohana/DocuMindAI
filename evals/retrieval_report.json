@@ -1,0 +1,478 @@
+{
+  "benchmark_name": "DocuMind Retrieval Benchmark v1",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "metrics": {
+    "corpus_size": 8,
+    "query_count": 16,
+    "answerable_query_count": 12,
+    "unanswerable_query_count": 4,
+    "recall_at_3": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "answerable_acceptance_rate": 1.0,
+    "unanswerable_abstention_rate": 1.0,
+    "threshold": 0.3
+  },
+  "query_results": [
+    {
+      "query_id": "R01",
+      "question": "How many days after purchase can a customer request a refund?",
+      "answerable": true,
+      "expected_source_ids": [
+        "refund_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.7651118636131287
+        },
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.4093199074268341
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.3541804254055023
+        }
+      ],
+      "best_similarity": 0.7651,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R02",
+      "question": "Where should a refund request be submitted?",
+      "answerable": true,
+      "expected_source_ids": [
+        "refund_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.5730302929878235
+        },
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.24970176815986633
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.21166901290416718
+        }
+      ],
+      "best_similarity": 0.573,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R03",
+      "question": "Which payment method is used for approved refunds?",
+      "answerable": true,
+      "expected_source_ids": [
+        "refund_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.5190051794052124
+        },
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.283608615398407
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.1448703557252884
+        }
+      ],
+      "best_similarity": 0.519,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R04",
+      "question": "When is customer support available?",
+      "answerable": true,
+      "expected_source_ids": [
+        "support_hours"
+      ],
+      "top_results": [
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.7287899255752563
+        },
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.35883164405822754
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.30224132537841797
+        }
+      ],
+      "best_similarity": 0.7288,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R05",
+      "question": "How can I get online technical support?",
+      "answerable": true,
+      "expected_source_ids": [
+        "support_hours"
+      ],
+      "top_results": [
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.7074275016784668
+        },
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.1577797383069992
+        },
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.1490631252527237
+        }
+      ],
+      "best_similarity": 0.7074,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R06",
+      "question": "What should users never share?",
+      "answerable": true,
+      "expected_source_ids": [
+        "account_security"
+      ],
+      "top_results": [
+        {
+          "source_id": "account_security",
+          "filename": "account_security.txt",
+          "similarity": 0.4213947057723999
+        },
+        {
+          "source_id": "upload_guidelines",
+          "filename": "upload_guidelines.txt",
+          "similarity": 0.26304891705513
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.06455107778310776
+        }
+      ],
+      "best_similarity": 0.4214,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R07",
+      "question": "What adds extra protection to an account?",
+      "answerable": true,
+      "expected_source_ids": [
+        "account_security"
+      ],
+      "top_results": [
+        {
+          "source_id": "account_security",
+          "filename": "account_security.txt",
+          "similarity": 0.40848425030708313
+        },
+        {
+          "source_id": "upload_guidelines",
+          "filename": "upload_guidelines.txt",
+          "similarity": 0.3295798897743225
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.14003250002861023
+        }
+      ],
+      "best_similarity": 0.4085,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R08",
+      "question": "What permission is needed before uploading a document?",
+      "answerable": true,
+      "expected_source_ids": [
+        "upload_guidelines"
+      ],
+      "top_results": [
+        {
+          "source_id": "upload_guidelines",
+          "filename": "upload_guidelines.txt",
+          "similarity": 0.7271443605422974
+        },
+        {
+          "source_id": "document_requirements",
+          "filename": "document_requirements.txt",
+          "similarity": 0.3260268568992615
+        },
+        {
+          "source_id": "account_security",
+          "filename": "account_security.txt",
+          "similarity": 0.23245123028755188
+        }
+      ],
+      "best_similarity": 0.7271,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R09",
+      "question": "What is the rule for confidential or sensitive information?",
+      "answerable": true,
+      "expected_source_ids": [
+        "upload_guidelines"
+      ],
+      "top_results": [
+        {
+          "source_id": "upload_guidelines",
+          "filename": "upload_guidelines.txt",
+          "similarity": 0.4581891894340515
+        },
+        {
+          "source_id": "account_security",
+          "filename": "account_security.txt",
+          "similarity": 0.13644658029079437
+        },
+        {
+          "source_id": "document_requirements",
+          "filename": "document_requirements.txt",
+          "similarity": 0.10527445375919342
+        }
+      ],
+      "best_similarity": 0.4582,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R10",
+      "question": "How soon are physical orders dispatched?",
+      "answerable": true,
+      "expected_source_ids": [
+        "shipping_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.8011008501052856
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.2829815149307251
+        },
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.2183593362569809
+        }
+      ],
+      "best_similarity": 0.8011,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R11",
+      "question": "Where can customers find invoices?",
+      "answerable": true,
+      "expected_source_ids": [
+        "invoice_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.6753919124603271
+        },
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.32669949531555176
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.2726903557777405
+        }
+      ],
+      "best_similarity": 0.6754,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "R12",
+      "question": "Can a subscription be cancelled before renewal?",
+      "answerable": true,
+      "expected_source_ids": [
+        "subscription_policy"
+      ],
+      "top_results": [
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.8688318729400635
+        },
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.23420239984989166
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.20198656618595123
+        }
+      ],
+      "best_similarity": 0.8688,
+      "accepted_by_threshold": true,
+      "expected_source_rank": 1,
+      "recall_at_3_hit": true
+    },
+    {
+      "query_id": "U01",
+      "question": "Who is the company's CEO?",
+      "answerable": false,
+      "expected_source_ids": [],
+      "top_results": [
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.08076559752225876
+        },
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.06462420523166656
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.050428252667188644
+        }
+      ],
+      "best_similarity": 0.0808,
+      "accepted_by_threshold": false,
+      "expected_source_rank": null,
+      "recall_at_3_hit": false
+    },
+    {
+      "query_id": "U02",
+      "question": "What is the company's headquarters street address?",
+      "answerable": false,
+      "expected_source_ids": [],
+      "top_results": [
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.18004858493804932
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.11700967699289322
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.0874815583229065
+        }
+      ],
+      "best_similarity": 0.18,
+      "accepted_by_threshold": false,
+      "expected_source_rank": null,
+      "recall_at_3_hit": false
+    },
+    {
+      "query_id": "U03",
+      "question": "Which credit cards are accepted?",
+      "answerable": false,
+      "expected_source_ids": [],
+      "top_results": [
+        {
+          "source_id": "refund_policy",
+          "filename": "refund_policy.txt",
+          "similarity": 0.20633532106876373
+        },
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.2034226506948471
+        },
+        {
+          "source_id": "subscription_policy",
+          "filename": "subscription_policy.txt",
+          "similarity": 0.14639215171337128
+        }
+      ],
+      "best_similarity": 0.2063,
+      "accepted_by_threshold": false,
+      "expected_source_rank": null,
+      "recall_at_3_hit": false
+    },
+    {
+      "query_id": "U04",
+      "question": "In which year was the company founded?",
+      "answerable": false,
+      "expected_source_ids": [],
+      "top_results": [
+        {
+          "source_id": "shipping_policy",
+          "filename": "shipping_policy.txt",
+          "similarity": 0.11276409775018692
+        },
+        {
+          "source_id": "invoice_policy",
+          "filename": "invoice_policy.txt",
+          "similarity": 0.08244757354259491
+        },
+        {
+          "source_id": "support_hours",
+          "filename": "support_hours.txt",
+          "similarity": 0.0572519451379776
+        }
+      ],
+      "best_similarity": 0.1128,
+      "accepted_by_threshold": false,
+      "expected_source_rank": null,
+      "recall_at_3_hit": false
+    }
+  ],
+  "limitations": [
+    "This is a small synthetic benchmark.",
+    "Recall@3 and MRR measure retrieval, not answer correctness.",
+    "Threshold acceptance does not prove that an answer is supported."
+  ]
+}
