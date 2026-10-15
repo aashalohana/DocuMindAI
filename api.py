@@ -2,6 +2,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from functools import lru_cache
 from pathlib import Path
 from tempfile import NamedTemporaryFile
+import os
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from sentence_transformers import SentenceTransformer
@@ -33,14 +34,23 @@ app = FastAPI(
 )
 
 
+allowed_origins = [
+    origin.strip()
+    for origin in os.getenv(
+        "FRONTEND_ORIGINS",
+        (
+            "http://localhost:5175,"
+            "http://127.0.0.1:5175,"
+            "http://localhost:5173,"
+            "http://127.0.0.1:5173"
+        ),
+    ).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5175",
-        "http://127.0.0.1:5175",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
