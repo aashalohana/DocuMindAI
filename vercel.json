@@ -1,0 +1,53 @@
+
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "frontend": {
+      "root": "frontend/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "./",
+      "framework": "fastapi",
+      "entrypoint": "api:app"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/documents",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/documents/(.*)",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/knowledge/ask",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/ask",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/upload",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/docs",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/docs/(.*)",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/openapi.json",
+      "destination": { "service": "backend" }
+    },
+    {
+      "source": "/(.*)",
+      "destination": { "service": "frontend" }
+    }
+  ]
+}

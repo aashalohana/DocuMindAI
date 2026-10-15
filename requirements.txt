@@ -1,15 +1,9 @@
-# API and document extraction
+# Lightweight dependencies for free hosted backend (no PyTorch / Transformers)
 fastapi>=0.115,<1.0
 uvicorn[standard]>=0.30,<1.0
 pypdf>=5.0,<7.0
 python-docx>=1.1,<2.0
 python-multipart>=0.0.20,<1.0
-
-# Retrieval, embeddings, and local answer generation
 numpy>=2.0,<3.0
-scikit-learn>=1.5,<2.0
-sentence-transformers>=5.0,<7.0
-transformers>=4.45,<6.0
-
-# Test suite
-pytest>=8.0,<10.0
+google-genai>=1.0,<2.0
+python-dotenv>=1.0,<2.0
