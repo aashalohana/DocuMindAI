@@ -1,0 +1,32 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      PYTHONUNBUFFERED: "1"
+      HF_HOME: /root/.cache/huggingface
+    volumes:
+      - documind_data:/app/data
+      - huggingface_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+  frontend:
+    image: node:24-alpine
+    working_dir: /app
+    ports:
+      - "5175:5175"
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+    command: sh -c "npm ci && npm run dev -- --host 0.0.0.0 --port 5175"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  documind_data:
+  huggingface_cache:
+  frontend_node_modules:
