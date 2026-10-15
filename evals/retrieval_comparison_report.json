@@ -1,0 +1,790 @@
+{
+  "benchmark_name": "DocuMind Hard-Negative Retrieval Benchmark v1",
+  "corpus_size": 12,
+  "query_count": 17,
+  "top_k": 3,
+  "models": {
+    "tfidf": {
+      "metrics": {
+        "method": "tfidf_word_and_bigram",
+        "answerable_query_count": 12,
+        "unanswerable_query_count": 5,
+        "hit_at_1": 0.6667,
+        "recall_at_3": 0.8333,
+        "mean_reciprocal_rank": 0.75,
+        "average_best_score_unanswerable": 0.0,
+        "max_best_score_unanswerable": 0.0
+      },
+      "query_results": [
+        {
+          "query_id": "H01",
+          "question": "How long after buying something can I ask to get my money back?",
+          "answerable": true,
+          "expected_source_ids": [
+            "refund_window"
+          ],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        },
+        {
+          "query_id": "H02",
+          "question": "After my refund gets approved, how many business days until the money arrives?",
+          "answerable": true,
+          "expected_source_ids": [
+            "refund_processing"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.429,
+          "top_results": [
+            {
+              "source_id": "refund_processing",
+              "filename": "refund_processing.txt",
+              "score": 0.429
+            },
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.2191
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.1295
+            }
+          ]
+        },
+        {
+          "query_id": "H03",
+          "question": "Can I get money back for software that I have already downloaded?",
+          "answerable": true,
+          "expected_source_ids": [
+            "digital_product_refunds"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.3467,
+          "top_results": [
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.3467
+            },
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.1816
+            }
+          ]
+        },
+        {
+          "query_id": "H04",
+          "question": "When is my parcel dispatched?",
+          "answerable": true,
+          "expected_source_ids": [
+            "shipping_dispatch"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.5531,
+          "top_results": [
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.5531
+            }
+          ]
+        },
+        {
+          "query_id": "H05",
+          "question": "Can delivery fees be refunded?",
+          "answerable": true,
+          "expected_source_ids": [
+            "shipping_fees"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.4801,
+          "top_results": [
+            {
+              "source_id": "shipping_fees",
+              "filename": "shipping_fees.txt",
+              "score": 0.4801
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.077
+            }
+          ]
+        },
+        {
+          "query_id": "H06",
+          "question": "Which days of the week is customer service open?",
+          "answerable": true,
+          "expected_source_ids": [
+            "support_hours"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.1918,
+          "top_results": [
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.1918
+            },
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.0843
+            },
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.0777
+            }
+          ]
+        },
+        {
+          "query_id": "H07",
+          "question": "How quickly does a support ticket get its first reply?",
+          "answerable": true,
+          "expected_source_ids": [
+            "support_response_time"
+          ],
+          "expected_source_rank": 2,
+          "best_score": 0.3871,
+          "top_results": [
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.3871
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.184
+            }
+          ]
+        },
+        {
+          "query_id": "H08",
+          "question": "Can I stop a subscription before it renews?",
+          "answerable": true,
+          "expected_source_ids": [
+            "subscription_cancel"
+          ],
+          "expected_source_rank": null,
+          "best_score": 0.26,
+          "top_results": [
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.26
+            }
+          ]
+        },
+        {
+          "query_id": "H09",
+          "question": "How frequently does the recurring subscription charge happen?",
+          "answerable": true,
+          "expected_source_ids": [
+            "subscription_billing"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.26,
+          "top_results": [
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.26
+            }
+          ]
+        },
+        {
+          "query_id": "H10",
+          "question": "Where do I download the purchase invoice?",
+          "answerable": true,
+          "expected_source_ids": [
+            "invoice_location"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.2787,
+          "top_results": [
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.2787
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.24
+            }
+          ]
+        },
+        {
+          "query_id": "H11",
+          "question": "What can I do to improve account security?",
+          "answerable": true,
+          "expected_source_ids": [
+            "account_security"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.3045,
+          "top_results": [
+            {
+              "source_id": "account_security",
+              "filename": "account_security.txt",
+              "score": 0.3045
+            },
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.1183
+            }
+          ]
+        },
+        {
+          "query_id": "H12",
+          "question": "Does the application support Microsoft Word files?",
+          "answerable": true,
+          "expected_source_ids": [
+            "supported_files"
+          ],
+          "expected_source_rank": 2,
+          "best_score": 0.2522,
+          "top_results": [
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.2522
+            },
+            {
+              "source_id": "supported_files",
+              "filename": "supported_files.txt",
+              "score": 0.1467
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.1199
+            }
+          ]
+        },
+        {
+          "query_id": "U01",
+          "question": "Who is the company's CEO?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        },
+        {
+          "query_id": "U02",
+          "question": "What is the company's headquarters street address?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        },
+        {
+          "query_id": "U03",
+          "question": "Which credit cards are accepted?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        },
+        {
+          "query_id": "U04",
+          "question": "Is there a restocking fee for returned physical goods?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        },
+        {
+          "query_id": "U05",
+          "question": "Who founded the company?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0,
+          "top_results": []
+        }
+      ]
+    },
+    "semantic": {
+      "metrics": {
+        "method": "sentence_transformer",
+        "answerable_query_count": 12,
+        "unanswerable_query_count": 5,
+        "hit_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "mean_reciprocal_rank": 1.0,
+        "average_best_score_unanswerable": 0.2308,
+        "max_best_score_unanswerable": 0.524
+      },
+      "query_results": [
+        {
+          "query_id": "H01",
+          "question": "How long after buying something can I ask to get my money back?",
+          "answerable": true,
+          "expected_source_ids": [
+            "refund_window"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.6929,
+          "top_results": [
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.6929
+            },
+            {
+              "source_id": "refund_processing",
+              "filename": "refund_processing.txt",
+              "score": 0.6084
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.5972
+            }
+          ]
+        },
+        {
+          "query_id": "H02",
+          "question": "After my refund gets approved, how many business days until the money arrives?",
+          "answerable": true,
+          "expected_source_ids": [
+            "refund_processing"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.773,
+          "top_results": [
+            {
+              "source_id": "refund_processing",
+              "filename": "refund_processing.txt",
+              "score": 0.773
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.6747
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.5252
+            }
+          ]
+        },
+        {
+          "query_id": "H03",
+          "question": "Can I get money back for software that I have already downloaded?",
+          "answerable": true,
+          "expected_source_ids": [
+            "digital_product_refunds"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.5723,
+          "top_results": [
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.5723
+            },
+            {
+              "source_id": "refund_processing",
+              "filename": "refund_processing.txt",
+              "score": 0.3652
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.3546
+            }
+          ]
+        },
+        {
+          "query_id": "H04",
+          "question": "When is my parcel dispatched?",
+          "answerable": true,
+          "expected_source_ids": [
+            "shipping_dispatch"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.729,
+          "top_results": [
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.729
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.3999
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.3352
+            }
+          ]
+        },
+        {
+          "query_id": "H05",
+          "question": "Can delivery fees be refunded?",
+          "answerable": true,
+          "expected_source_ids": [
+            "shipping_fees"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.7389,
+          "top_results": [
+            {
+              "source_id": "shipping_fees",
+              "filename": "shipping_fees.txt",
+              "score": 0.7389
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.4537
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.4438
+            }
+          ]
+        },
+        {
+          "query_id": "H06",
+          "question": "Which days of the week is customer service open?",
+          "answerable": true,
+          "expected_source_ids": [
+            "support_hours"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.6438,
+          "top_results": [
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.6438
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.3494
+            },
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.3468
+            }
+          ]
+        },
+        {
+          "query_id": "H07",
+          "question": "How quickly does a support ticket get its first reply?",
+          "answerable": true,
+          "expected_source_ids": [
+            "support_response_time"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.7966,
+          "top_results": [
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.7966
+            },
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.4409
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.4143
+            }
+          ]
+        },
+        {
+          "query_id": "H08",
+          "question": "Can I stop a subscription before it renews?",
+          "answerable": true,
+          "expected_source_ids": [
+            "subscription_cancel"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.8173,
+          "top_results": [
+            {
+              "source_id": "subscription_cancel",
+              "filename": "subscription_cancel.txt",
+              "score": 0.8173
+            },
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.7085
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.3178
+            }
+          ]
+        },
+        {
+          "query_id": "H09",
+          "question": "How frequently does the recurring subscription charge happen?",
+          "answerable": true,
+          "expected_source_ids": [
+            "subscription_billing"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.7599,
+          "top_results": [
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.7599
+            },
+            {
+              "source_id": "subscription_cancel",
+              "filename": "subscription_cancel.txt",
+              "score": 0.5608
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.2897
+            }
+          ]
+        },
+        {
+          "query_id": "H10",
+          "question": "Where do I download the purchase invoice?",
+          "answerable": true,
+          "expected_source_ids": [
+            "invoice_location"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.7352,
+          "top_results": [
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.7352
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.2648
+            },
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.2594
+            }
+          ]
+        },
+        {
+          "query_id": "H11",
+          "question": "What can I do to improve account security?",
+          "answerable": true,
+          "expected_source_ids": [
+            "account_security"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.4893,
+          "top_results": [
+            {
+              "source_id": "account_security",
+              "filename": "account_security.txt",
+              "score": 0.4893
+            },
+            {
+              "source_id": "subscription_cancel",
+              "filename": "subscription_cancel.txt",
+              "score": 0.1027
+            },
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.084
+            }
+          ]
+        },
+        {
+          "query_id": "H12",
+          "question": "Does the application support Microsoft Word files?",
+          "answerable": true,
+          "expected_source_ids": [
+            "supported_files"
+          ],
+          "expected_source_rank": 1,
+          "best_score": 0.4651,
+          "top_results": [
+            {
+              "source_id": "supported_files",
+              "filename": "supported_files.txt",
+              "score": 0.4651
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.1864
+            },
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.1223
+            }
+          ]
+        },
+        {
+          "query_id": "U01",
+          "question": "Who is the company's CEO?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.1316,
+          "top_results": [
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.1316
+            },
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.1019
+            },
+            {
+              "source_id": "subscription_billing",
+              "filename": "subscription_billing.txt",
+              "score": 0.064
+            }
+          ]
+        },
+        {
+          "query_id": "U02",
+          "question": "What is the company's headquarters street address?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.2062,
+          "top_results": [
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.2062
+            },
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.1789
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.1344
+            }
+          ]
+        },
+        {
+          "query_id": "U03",
+          "question": "Which credit cards are accepted?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.1946,
+          "top_results": [
+            {
+              "source_id": "invoice_location",
+              "filename": "invoice_location.txt",
+              "score": 0.1946
+            },
+            {
+              "source_id": "refund_processing",
+              "filename": "refund_processing.txt",
+              "score": 0.1755
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.1671
+            }
+          ]
+        },
+        {
+          "query_id": "U04",
+          "question": "Is there a restocking fee for returned physical goods?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.524,
+          "top_results": [
+            {
+              "source_id": "shipping_fees",
+              "filename": "shipping_fees.txt",
+              "score": 0.524
+            },
+            {
+              "source_id": "refund_window",
+              "filename": "refund_window.txt",
+              "score": 0.415
+            },
+            {
+              "source_id": "digital_product_refunds",
+              "filename": "digital_product_refunds.txt",
+              "score": 0.3683
+            }
+          ]
+        },
+        {
+          "query_id": "U05",
+          "question": "Who founded the company?",
+          "answerable": false,
+          "expected_source_ids": [],
+          "expected_source_rank": null,
+          "best_score": 0.0977,
+          "top_results": [
+            {
+              "source_id": "shipping_dispatch",
+              "filename": "shipping_dispatch.txt",
+              "score": 0.0977
+            },
+            {
+              "source_id": "support_hours",
+              "filename": "support_hours.txt",
+              "score": 0.0915
+            },
+            {
+              "source_id": "support_response_time",
+              "filename": "support_response_time.txt",
+              "score": 0.0496
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation_notes": [
+    "Metrics are measured on a small synthetic benchmark.",
+    "Recall@3 measures source retrieval, not answer correctness.",
+    "MRR rewards the expected source appearing higher in the ranking.",
+    "TF-IDF and embedding similarity scores use different scales.",
+    "A shared abstention threshold should not be applied to both methods."
+  ]
+}

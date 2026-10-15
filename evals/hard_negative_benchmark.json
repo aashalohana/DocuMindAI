@@ -1,0 +1,172 @@
+
+{
+  "benchmark_name": "DocuMind Hard-Negative Retrieval Benchmark v1",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "top_k": 3,
+  "corpus": [
+    {
+      "id": "refund_window",
+      "filename": "refund_window.txt",
+      "text": "Refund requests must be submitted within 14 calendar days of purchase. The purchase date is day zero for this policy."
+    },
+    {
+      "id": "refund_processing",
+      "filename": "refund_processing.txt",
+      "text": "Once a refund is approved, funds are sent to the original payment method and usually arrive within 5 to 7 business days."
+    },
+    {
+      "id": "digital_product_refunds",
+      "filename": "digital_product_refunds.txt",
+      "text": "Digital purchases may be refunded within 14 days only if the product has not been downloaded. Downloaded digital products are not eligible for refunds."
+    },
+    {
+      "id": "shipping_dispatch",
+      "filename": "shipping_dispatch.txt",
+      "text": "Orders are dispatched within two business days. A tracking link is sent after the parcel is dispatched."
+    },
+    {
+      "id": "shipping_fees",
+      "filename": "shipping_fees.txt",
+      "text": "Shipping and delivery fees are non-refundable, even when an order's product price is refunded."
+    },
+    {
+      "id": "support_hours",
+      "filename": "support_hours.txt",
+      "text": "Customer support is available Monday through Friday. The support team is closed on Saturday and Sunday."
+    },
+    {
+      "id": "support_response_time",
+      "filename": "support_response_time.txt",
+      "text": "Support tickets usually receive an initial response within 24 business hours. Complex requests may take longer."
+    },
+    {
+      "id": "subscription_cancel",
+      "filename": "subscription_cancel.txt",
+      "text": "Customers can cancel subscriptions at any time before the next renewal date. Access remains active until the current billing period ends."
+    },
+    {
+      "id": "subscription_billing",
+      "filename": "subscription_billing.txt",
+      "text": "Subscriptions renew every 30 days, and the next subscription payment is charged on the renewal date."
+    },
+    {
+      "id": "invoice_location",
+      "filename": "invoice_location.txt",
+      "text": "Invoices are available in the account billing dashboard. Each invoice can be downloaded as a PDF and contains the purchase date and order reference."
+    },
+    {
+      "id": "account_security",
+      "filename": "account_security.txt",
+      "text": "Never share your account password. Enable two-factor authentication to add an extra security layer."
+    },
+    {
+      "id": "supported_files",
+      "filename": "supported_files.txt",
+      "text": "The document assistant accepts PDF and DOCX files. Scanned image-only PDFs may need OCR to extract searchable text."
+    }
+  ],
+  "queries": [
+    {
+      "id": "H01",
+      "question": "How long after buying something can I ask to get my money back?",
+      "expected_source_ids": ["refund_window"],
+      "answerable": true
+    },
+    {
+      "id": "H02",
+      "question": "After my refund gets approved, how many business days until the money arrives?",
+      "expected_source_ids": ["refund_processing"],
+      "answerable": true
+    },
+    {
+      "id": "H03",
+      "question": "Can I get money back for software that I have already downloaded?",
+      "expected_source_ids": ["digital_product_refunds"],
+      "answerable": true
+    },
+    {
+      "id": "H04",
+      "question": "When is my parcel dispatched?",
+      "expected_source_ids": ["shipping_dispatch"],
+      "answerable": true
+    },
+    {
+      "id": "H05",
+      "question": "Can delivery fees be refunded?",
+      "expected_source_ids": ["shipping_fees"],
+      "answerable": true
+    },
+    {
+      "id": "H06",
+      "question": "Which days of the week is customer service open?",
+      "expected_source_ids": ["support_hours"],
+      "answerable": true
+    },
+    {
+      "id": "H07",
+      "question": "How quickly does a support ticket get its first reply?",
+      "expected_source_ids": ["support_response_time"],
+      "answerable": true
+    },
+    {
+      "id": "H08",
+      "question": "Can I stop a subscription before it renews?",
+      "expected_source_ids": ["subscription_cancel"],
+      "answerable": true
+    },
+    {
+      "id": "H09",
+      "question": "How frequently does the recurring subscription charge happen?",
+      "expected_source_ids": ["subscription_billing"],
+      "answerable": true
+    },
+    {
+      "id": "H10",
+      "question": "Where do I download the purchase invoice?",
+      "expected_source_ids": ["invoice_location"],
+      "answerable": true
+    },
+    {
+      "id": "H11",
+      "question": "What can I do to improve account security?",
+      "expected_source_ids": ["account_security"],
+      "answerable": true
+    },
+    {
+      "id": "H12",
+      "question": "Does the application support Microsoft Word files?",
+      "expected_source_ids": ["supported_files"],
+      "answerable": true
+    },
+    {
+      "id": "U01",
+      "question": "Who is the company's CEO?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U02",
+      "question": "What is the company's headquarters street address?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U03",
+      "question": "Which credit cards are accepted?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U04",
+      "question": "Is there a restocking fee for returned physical goods?",
+      "expected_source_ids": [],
+      "answerable": false
+    },
+    {
+      "id": "U05",
+      "question": "Who founded the company?",
+      "expected_source_ids": [],
+      "answerable": false
+    }
+  ]
+}
